@@ -1,0 +1,12 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        { "type": "host", "value": "www.mikeyjbeck.com" }
+      ],
+      "destination": "https://mikeyjbeck.com/:path*",
+      "permanent": true
+    }
+  ]
+}
