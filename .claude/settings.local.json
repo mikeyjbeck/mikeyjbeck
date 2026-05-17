@@ -95,7 +95,12 @@
       "Bash(npx --yes vercel@latest project ls)",
       "Bash(curl -sIL --max-time 10 https://www.mikeyjbeck.com)",
       "Bash(curl -s http://localhost:5173/styles.css)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(sips -s format webp -s formatOptions 84 __TRACKED_VAR__.jpg --out __TRACKED_VAR__.webp)",
+      "Bash(sips -s format webp proof-argus-bio.jpg --out test.webp)",
+      "Bash(rm -f test.webp)",
+      "Bash(/usr/bin/python3 -c \"from PIL import Image; print\\('system PIL OK'\\)\")",
+      "Bash(/usr/bin/python3 -c ' *)"
     ]
   }
 }
