@@ -100,7 +100,29 @@
       "Bash(sips -s format webp proof-argus-bio.jpg --out test.webp)",
       "Bash(rm -f test.webp)",
       "Bash(/usr/bin/python3 -c \"from PIL import Image; print\\('system PIL OK'\\)\")",
-      "Bash(/usr/bin/python3 -c ' *)"
+      "Bash(/usr/bin/python3 -c ' *)",
+      "WebFetch(domain:www.oooweedeals.com)",
+      "WebFetch(domain:app.gohighlevel.com)",
+      "mcp__986c10db-9de5-4f7d-b4c0-3ddb1213502b__balance",
+      "mcp__986c10db-9de5-4f7d-b4c0-3ddb1213502b__list_workspaces",
+      "mcp__c06dd8c2-20d5-47ff-bc0e-d8ba0be6871a__list_vibiz",
+      "WebSearch",
+      "mcp__986c10db-9de5-4f7d-b4c0-3ddb1213502b__models_explore",
+      "mcp__986c10db-9de5-4f7d-b4c0-3ddb1213502b__generate_video",
+      "Bash(find /Users/michaelbeck -maxdepth 5 -type d -iname \"*OooWee*\" 2>/dev/null)",
+      "mcp__986c10db-9de5-4f7d-b4c0-3ddb1213502b__media_upload",
+      "Bash(curl -X PUT -H \"Content-Type: image/png\" --data-binary \"@/Users/michaelbeck/Downloads/OooWee Brand Assets /2.png\" 'https://d276s3zg8h21b2.cloudfront.net/user_3DgWgcNk3H6voBFCx9KNfCLv2GD/04f3efbd-c449-476c-9513-cc8b65fa9f04.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAYPNTVMCGYPZMTKFK%2F20260521%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20260521T063355Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=content-type%3Bhost&X-Amz-Signature=32f87b79a9e9cb32d841b2830dfd3da5c5fb786257e782d2434718e2a5306922' -w \"\\\\nHTTP %{http_code}\\\\n\" -s)",
+      "mcp__986c10db-9de5-4f7d-b4c0-3ddb1213502b__media_confirm",
+      "mcp__986c10db-9de5-4f7d-b4c0-3ddb1213502b__job_display",
+      "mcp__986c10db-9de5-4f7d-b4c0-3ddb1213502b__generate_image",
+      "Bash(curl -s -o /tmp/soul_img1.png 'https://d8j0ntlcm91z4.cloudfront.net/user_3DgWgcNk3H6voBFCx9KNfCLv2GD/hf_20260521_064438_0730afed-c523-4755-8a25-0675ee77924b.png')",
+      "Read(//tmp/**)",
+      "Bash(curl -s -o /tmp/nb1.png 'https://d8j0ntlcm91z4.cloudfront.net/user_3DgWgcNk3H6voBFCx9KNfCLv2GD/hf_20260521_064619_3655dc91-e687-4e4f-8bff-b7a3f62711a1.png')",
+      "Bash(curl -s -o /tmp/nb2.png 'https://d8j0ntlcm91z4.cloudfront.net/user_3DgWgcNk3H6voBFCx9KNfCLv2GD/hf_20260521_064626_092d270d-e040-4e0f-b552-81e59833bd61.png')",
+      "Bash(curl -s -o /tmp/nb3.png 'https://d8j0ntlcm91z4.cloudfront.net/user_3DgWgcNk3H6voBFCx9KNfCLv2GD/hf_20260521_064630_c78f06e1-d4d4-437a-b2e9-463cefc0eb00.png')",
+      "Bash(curl -sL --max-time 15 \"https://app.gohighlevel.com/v2/preview/ZkGeonaEvb6GKlCV5n3l?notrack=true\")",
+      "Bash(curl -sL --max-time 15 \"https://storage.googleapis.com/msgsndr/c3cmUrbBhdgs54adfIYP/media/666136581848ae65069c5b9f.jpeg\" -o funnel-ooowee-deals-logo.jpeg)",
+      "Bash(sips --getProperty pixelWidth --getProperty pixelHeight funnel-ooowee-deals-logo.jpeg)"
     ]
   }
 }
