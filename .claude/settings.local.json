@@ -122,7 +122,11 @@
       "Bash(curl -s -o /tmp/nb3.png 'https://d8j0ntlcm91z4.cloudfront.net/user_3DgWgcNk3H6voBFCx9KNfCLv2GD/hf_20260521_064630_c78f06e1-d4d4-437a-b2e9-463cefc0eb00.png')",
       "Bash(curl -sL --max-time 15 \"https://app.gohighlevel.com/v2/preview/ZkGeonaEvb6GKlCV5n3l?notrack=true\")",
       "Bash(curl -sL --max-time 15 \"https://storage.googleapis.com/msgsndr/c3cmUrbBhdgs54adfIYP/media/666136581848ae65069c5b9f.jpeg\" -o funnel-ooowee-deals-logo.jpeg)",
-      "Bash(sips --getProperty pixelWidth --getProperty pixelHeight funnel-ooowee-deals-logo.jpeg)"
+      "Bash(sips --getProperty pixelWidth --getProperty pixelHeight funnel-ooowee-deals-logo.jpeg)",
+      "Bash(git rm *)",
+      "Bash(curl -s --max-time 15 https://mikeyjbeck.com)",
+      "Bash(sips -s format jpeg -s formatOptions 84 --resampleWidth 1400 /tmp/funnel-screenshot.jpeg --out proof-ooowee-funnel.jpg)",
+      "Bash(curl -sI --max-time 15 \"https://app.gohighlevel.com/v2/preview/ZkGeonaEvb6GKlCV5n3l?notrack=true\")"
     ]
   }
 }

@@ -119,5 +119,31 @@
     });
   });
 
+  // -------- Funnel iframe live-preview scaling --------
+  // Iframes render at 1280px wide; scale them to whatever the container resolves to.
+  const FUNNEL_BASE_WIDTH = 1280;
+  const funnelWraps = document.querySelectorAll('[data-funnel-iframe-wrap]');
+  if (funnelWraps.length && 'ResizeObserver' in window) {
+    const ro = new ResizeObserver((entries) => {
+      entries.forEach((entry) => {
+        const w = entry.contentRect.width;
+        if (w > 0) {
+          const scale = (w / FUNNEL_BASE_WIDTH).toFixed(3);
+          entry.target.style.setProperty('--funnel-scale', scale);
+        }
+      });
+    });
+    funnelWraps.forEach((wrap) => {
+      ro.observe(wrap);
+      const iframe = wrap.querySelector('.funnel-iframe');
+      if (iframe) {
+        iframe.addEventListener('load', () => {
+          // Small delay so the iframe finishes painting before we reveal it
+          setTimeout(() => wrap.classList.add('is-ready'), 400);
+        });
+      }
+    });
+  }
+
   // Cursor follower removed for performance — native cursor used instead.
 })();

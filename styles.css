@@ -2395,7 +2395,7 @@ img { display: block; max-width: 100%; }
 }
 
 /* ============================================================
-   MARKETING FUNNEL — OooWee Deals case study
+   MARKETING FUNNEL — OooWee Deals case study (live iframe preview)
    ============================================================ */
 .funnel-strip {
   position: relative;
@@ -2405,151 +2405,95 @@ img { display: block; max-width: 100%; }
 }
 .funnel-case {
   display: grid;
-  grid-template-columns: 1.15fr 1fr;
-  gap: 28px;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 24px;
   margin-top: 8px;
-  align-items: stretch;
+  align-items: start;
 }
 
-/* The live mini-preview tile — uses the actual funnel's brand gradient */
+/* Live mini-preview — iframe scaled inside a compact frame */
 .funnel-preview {
   position: relative;
   display: block;
-  border-radius: 14px;
+  border-radius: 12px;
   overflow: hidden;
   text-decoration: none;
   color: inherit;
   cursor: pointer;
+  max-width: 380px;
   transition:
     transform .5s cubic-bezier(.2,.7,.2,1),
     box-shadow .5s cubic-bezier(.2,.7,.2,1);
   box-shadow:
-    0 22px 50px -22px rgba(91, 80, 214, 0.5),
-    0 0 0 1px rgba(255, 255, 255, 0.06);
+    0 22px 44px -22px rgba(91, 80, 214, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 .funnel-frame {
   position: relative;
-  aspect-ratio: 4 / 5;
-  padding: 36px 28px 32px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  /* Mirrors the actual GHL funnel hero — orange + purple + cream radial gradient */
-  background:
-    radial-gradient(60% 80% at 8% 30%, rgba(242, 107, 31, 0.55), transparent 60%),
-    radial-gradient(60% 80% at 92% 40%, rgba(91, 80, 214, 0.45), transparent 60%),
-    radial-gradient(80% 100% at 50% 80%, rgba(30, 143, 224, 0.18), transparent 70%),
-    linear-gradient(180deg, #fffaf5 0%, #f4eefb 100%);
+  aspect-ratio: 4 / 4.2;
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(180deg, #fffaf5 0%, #f4eefb 100%);
 }
-.funnel-glow {
+.funnel-poster {
   position: absolute;
   inset: 0;
-  background-image:
-    linear-gradient(rgba(15, 23, 42, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
-  background-size: 36px 36px;
-  mask-image: radial-gradient(60% 60% at 50% 40%, #000 60%, transparent 100%);
-  -webkit-mask-image: radial-gradient(60% 60% at 50% 40%, #000 60%, transparent 100%);
-  opacity: 0.6;
-  pointer-events: none;
-}
-.funnel-content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  margin: auto 0;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  align-items: center;
-}
-.funnel-pill {
-  display: inline-flex;
-  align-items: center;
-  background: #5B50D6;
-  color: #FFFFFF;
-  font-family: var(--font-body);
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  padding: 6px 14px;
-  border-radius: 100px;
-  box-shadow: 0 8px 20px -6px rgba(91, 80, 214, 0.5);
-}
-.funnel-headline {
-  font-family: var(--font-body);
-  font-weight: 800;
-  font-size: clamp(20px, 2.4vw, 28px);
-  line-height: 1.18;
-  letter-spacing: -0.02em;
-  color: #1A1A28;
-  margin: 0;
-  max-width: 90%;
-}
-.funnel-accent {
-  color: #F26B1F;
-}
-.funnel-sub {
-  font-family: var(--font-body);
-  font-size: 11px;
-  line-height: 1.5;
-  color: rgba(26, 26, 40, 0.7);
-  max-width: 80%;
-  margin: 0 auto;
-}
-.funnel-ctas {
-  display: inline-flex;
-  gap: 10px;
-  margin-top: 4px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.funnel-cta-primary {
-  background: #F26B1F;
-  color: #FFFFFF;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  padding: 9px 16px;
-  border-radius: 8px;
-  box-shadow: 0 8px 18px -6px rgba(242, 107, 31, 0.55);
-}
-.funnel-cta-ghost {
-  background: #FFFFFF;
-  color: #1A1A28;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  padding: 9px 16px;
-  border-radius: 8px;
-  border: 1px solid rgba(26, 26, 40, 0.1);
-}
-.funnel-stats {
-  display: inline-flex;
-  gap: 22px;
-  margin-top: 10px;
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: rgba(26, 26, 40, 0.65);
-}
-.funnel-stats strong {
   display: block;
-  font-family: var(--font-body);
-  font-size: 22px;
-  font-weight: 800;
-  letter-spacing: -0.01em;
-  text-transform: none;
-  color: #F26B1F;
-  margin-bottom: 2px;
+  z-index: 1;
+  transition: opacity .8s ease;
+}
+.funnel-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+/* Once the iframe is ready, it fades over the poster */
+.funnel-iframe-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity .5s ease;
+}
+.funnel-iframe-wrap.is-ready { opacity: 1; }
+.funnel-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1280px;
+  height: 1344px;       /* matches aspect 4/4.2 at 1280 base width */
+  border: 0;
+  background: transparent;
+  transform-origin: top left;
+  transform: scale(var(--funnel-scale, 0.27));
+  pointer-events: none; /* clicks pass through to the anchor wrapper */
+}
+
+/* Tiny pulsing dot signaling "live" */
+.funnel-live-dot {
+  position: absolute;
+  top: 14px; left: 14px;
+  z-index: 4;
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  background: #FF3B5C;
+  box-shadow:
+    0 0 0 3px rgba(255, 59, 92, 0.25),
+    0 0 14px rgba(255, 59, 92, 0.6);
+  animation: funnel-live-pulse 2s ease-in-out infinite;
+}
+@keyframes funnel-live-pulse {
+  0%, 100% { box-shadow: 0 0 0 3px rgba(255, 59, 92, 0.25), 0 0 14px rgba(255, 59, 92, 0.6); }
+  50%      { box-shadow: 0 0 0 7px rgba(255, 59, 92, 0),    0 0 22px rgba(255, 59, 92, 0.3); }
 }
 .funnel-open-badge {
   position: absolute;
-  top: 14px;
-  right: 14px;
-  z-index: 3;
+  top: 12px;
+  right: 12px;
+  z-index: 4;
   background: rgba(15, 15, 18, 0.85);
   color: #FFFFFF;
   font-family: var(--font-body);
@@ -2559,25 +2503,23 @@ img { display: block; max-width: 100%; }
   text-transform: uppercase;
   padding: 6px 12px;
   border-radius: 100px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-  opacity: 0.95;
-  transition: opacity .25s ease, transform .25s ease;
+  transition: background .25s ease, color .25s ease, transform .25s ease;
 }
 .funnel-preview:hover {
-  transform: translateY(-6px) scale(1.01);
+  transform: translateY(-5px) scale(1.01);
   box-shadow:
-    0 36px 60px -20px rgba(91, 80, 214, 0.65),
-    0 0 0 1px rgba(255, 255, 255, 0.18),
-    0 0 50px -10px rgba(242, 107, 31, 0.4);
+    0 32px 56px -20px rgba(91, 80, 214, 0.65),
+    0 0 0 1px rgba(255, 255, 255, 0.2),
+    0 0 44px -8px rgba(242, 107, 31, 0.4);
 }
 .funnel-preview:hover .funnel-open-badge {
-  transform: translateY(-1px);
   background: #FFFFFF;
   color: #0A0A0B;
   border-color: #FFFFFF;
-  opacity: 1;
+  transform: translateY(-1px);
 }
 
 /* Case-study text column — sits in dark editorial style alongside the preview */
