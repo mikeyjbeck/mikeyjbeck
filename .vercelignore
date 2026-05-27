@@ -1,0 +1,14 @@
+# Exclude developer tooling + temp dirs from Vercel uploads
+.git
+.claude
+node_modules
+.DS_Store
+*.log
+.cache
+.vercel
+desktop.ini
+Thumbs.db
+
+# Source-only PSDs / raw video — site only needs the processed assets
+*.psd
+*.ai
