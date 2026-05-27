@@ -145,5 +145,59 @@
     });
   }
 
+  // -------- Work showcase cursor-following preview thumb --------
+  const workList = document.querySelector('[data-work-list]');
+  const cursorThumb = document.querySelector('[data-cursor-thumb]');
+  if (workList && cursorThumb && window.matchMedia('(hover: hover)').matches) {
+    const thumbImg = cursorThumb.querySelector('img');
+    let mouseX = 0, mouseY = 0;
+    let curX  = 0, curY  = 0;
+    let raf = null;
+    let isVisible = false;
+
+    const updatePos = (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      if (!raf) raf = requestAnimationFrame(loop);
+    };
+    const loop = () => {
+      curX += (mouseX - curX) * 0.18;
+      curY += (mouseY - curY) * 0.18;
+      const offsetX = 24;
+      const offsetY = -90;
+      cursorThumb.style.transform = `translate3d(${curX + offsetX}px, ${curY + offsetY}px, 0)`;
+      if (Math.abs(mouseX - curX) > 0.1 || Math.abs(mouseY - curY) > 0.1) {
+        raf = requestAnimationFrame(loop);
+      } else {
+        raf = null;
+      }
+    };
+
+    workList.addEventListener('mousemove', updatePos, { passive: true });
+
+    document.querySelectorAll('.work-row[data-thumb]').forEach((row) => {
+      row.addEventListener('mouseenter', () => {
+        const src = row.getAttribute('data-thumb');
+        const bg  = row.getAttribute('data-thumb-bg');
+        if (bg) cursorThumb.style.background = bg;
+        if (thumbImg.getAttribute('src') !== src) {
+          thumbImg.setAttribute('src', src);
+        }
+        cursorThumb.classList.add('is-visible');
+        isVisible = true;
+      });
+      row.addEventListener('mouseleave', () => {
+        cursorThumb.classList.remove('is-visible');
+        isVisible = false;
+      });
+    });
+
+    // Hide if cursor leaves the entire list
+    workList.addEventListener('mouseleave', () => {
+      cursorThumb.classList.remove('is-visible');
+      isVisible = false;
+    });
+  }
+
   // Cursor follower removed for performance — native cursor used instead.
 })();

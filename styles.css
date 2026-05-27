@@ -4,20 +4,20 @@
    ============================================================ */
 
 :root {
-  /* Monochrome palette — Eileen-style, with white glow accent */
-  --bone:        #0A0A0B;   /* page background (near-black) */
-  --ivory:       #131318;   /* card surface */
-  --ivory-warm:  #18181E;   /* slightly lifted card variant */
-  --charcoal:    #EAEAEE;   /* primary text (bone on dark) */
-  --charcoal-2:  #9CA0A8;   /* secondary text (smoke) */
-  --sage:        #6B6B73;   /* mid grey */
-  --sage-deep:   #8F8F95;   /* lighter mid grey */
-  --terracotta:  #FAFAFA;   /* accent (now pure white — used for glow) */
-  --terracotta-2:#D4D4D8;   /* silver accent */
-  --olive:       #5C5C63;   /* deep grey */
-  --stone:       #2D2D33;   /* hairline / soft borders */
-  --stone-soft:  #1F1F25;   /* deeper background block */
-  --cream-cloud: #25252B;
+  /* Cool monochrome palette — blackish-grey, neutral undertones, white glow accent */
+  --bone:        #07070A;   /* page background (true near-black) */
+  --ivory:       #111116;   /* card surface (cool charcoal) */
+  --ivory-warm:  #16161C;   /* slightly lifted card variant */
+  --charcoal:    #E6E7EA;   /* primary text (cool bone) */
+  --charcoal-2:  #8E9099;   /* secondary text (cool smoke) */
+  --sage:        #5E5E68;   /* mid grey */
+  --sage-deep:   #82838C;   /* lighter mid grey */
+  --terracotta:  #FAFAFC;   /* accent (pure cool white — used for glow) */
+  --terracotta-2:#D2D3D8;   /* silver accent */
+  --olive:       #525258;   /* deep grey */
+  --stone:       #26262C;   /* hairline / soft borders */
+  --stone-soft:  #1A1A1F;   /* deeper background block */
+  --cream-cloud: #1F1F26;
 
   /* Type */
   --font-display: 'Playfair Display', Georgia, serif;
@@ -325,14 +325,14 @@ img { display: block; max-width: 100%; }
   overflow: hidden;
 }
 
-/* Monochrome scene gradients — dark slate base, subtly modulated per section */
+/* Monochrome scene gradients — cool slate base, subtly modulated per section */
 .scene::before {
   content: "";
   position: absolute; inset: 0;
   background: linear-gradient(180deg,
-    #0E0E12 0%,
-    #131318 50%,
-    #0A0A0B 100%);
+    #0B0B10 0%,
+    #11111A 50%,
+    #07070A 100%);
   z-index: 0;
 }
 
@@ -352,38 +352,38 @@ img { display: block; max-width: 100%; }
 /* Per-scene subtle gradient variations — kept very close to base for cohesion */
 #hero::before {
   background:
-    radial-gradient(ellipse 80% 60% at 70% 30%, rgba(255, 255, 255, 0.06) 0%, transparent 60%),
-    linear-gradient(180deg, #0F0F14 0%, #16161C 50%, #0A0A0B 100%);
-}
-#about::before {
-  background:
-    radial-gradient(ellipse 70% 50% at 30% 40%, rgba(255, 255, 255, 0.04) 0%, transparent 60%),
-    linear-gradient(180deg, #101015 0%, #14141A 50%, #0B0B0E 100%);
+    radial-gradient(ellipse 80% 60% at 70% 30%, rgba(255, 255, 255, 0.05) 0%, transparent 60%),
+    linear-gradient(180deg, #0C0C14 0%, #131320 50%, #07070A 100%);
 }
 #approach::before {
   background:
-    radial-gradient(ellipse 90% 60% at 50% 35%, rgba(255, 255, 255, 0.08) 0%, transparent 65%),
-    linear-gradient(180deg, #0F0F16 0%, #16161E 50%, #0A0A0E 100%);
+    radial-gradient(ellipse 90% 60% at 50% 35%, rgba(255, 255, 255, 0.06) 0%, transparent 65%),
+    linear-gradient(180deg, #0B0B14 0%, #12121C 50%, #07070A 100%);
+}
+#work::before {
+  background:
+    radial-gradient(ellipse 95% 70% at 50% 50%, rgba(255, 255, 255, 0.04) 0%, transparent 65%),
+    linear-gradient(180deg, #090911 0%, #0F0F18 50%, #07070A 100%);
 }
 #project-01::before {
-  background: linear-gradient(180deg, #0E0E12 0%, #17171E 50%, #0C0C10 100%);
+  background: linear-gradient(180deg, #0B0B12 0%, #14141E 50%, #08080C 100%);
 }
 #project-02::before {
-  background: linear-gradient(180deg, #0F0F14 0%, #161620 50%, #0B0B0E 100%);
+  background: linear-gradient(180deg, #0C0C14 0%, #14141E 50%, #07070A 100%);
 }
 #project-03::before {
-  background: linear-gradient(180deg, #101016 0%, #18181F 50%, #0C0C10 100%);
+  background: linear-gradient(180deg, #0E0E16 0%, #15151F 50%, #08080C 100%);
 }
 #project-04::before {
-  background: linear-gradient(180deg, #0E0E12 0%, #16161D 50%, #0B0B0F 100%);
+  background: linear-gradient(180deg, #0B0B12 0%, #14141C 50%, #07070C 100%);
 }
 #connect::before {
-  background: linear-gradient(180deg, #0F0F14 0%, #15151B 50%, #0A0A0E 100%);
+  background: linear-gradient(180deg, #0C0C14 0%, #12121A 50%, #07070C 100%);
 }
 #contact::before {
   background:
-    radial-gradient(ellipse 80% 60% at 50% 30%, rgba(255, 255, 255, 0.07) 0%, transparent 60%),
-    linear-gradient(180deg, #11111A 0%, #161620 50%, #0A0A0D 100%);
+    radial-gradient(ellipse 80% 60% at 50% 30%, rgba(255, 255, 255, 0.06) 0%, transparent 60%),
+    linear-gradient(180deg, #0D0D18 0%, #12121E 50%, #07070A 100%);
 }
 
 /* ============================================================
@@ -2605,6 +2605,222 @@ img { display: block; max-width: 100%; }
   .funnel-headline { font-size: clamp(22px, 5.6vw, 28px); }
   .funnel-bullets li { grid-template-columns: 44px 1fr; gap: 12px; }
   .funnel-bullet-num { font-size: 20px; }
+}
+
+/* ============================================================
+   WORK SHOWCASE — Eileen-style vertical project index
+   with cursor-following preview thumbnail
+   ============================================================ */
+
+/* Wider card variant — Work uses more horizontal real estate */
+.card.card-wide {
+  max-width: 1280px;
+}
+
+.work-head {
+  margin-bottom: 8px;
+}
+.work-head-sub {
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+.work-list {
+  list-style: none;
+  padding: 0;
+  margin: 28px 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+}
+.work-list li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.work-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 56px 1.4fr 2fr 88px 28px;
+  align-items: center;
+  gap: 24px;
+  padding: 28px 18px;
+  text-decoration: none;
+  color: var(--charcoal);
+  transition:
+    padding .55s cubic-bezier(.2,.7,.2,1),
+    color .35s ease,
+    background .35s ease;
+}
+.work-row:hover {
+  padding-left: 30px;
+  padding-right: 6px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.work-num {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: var(--charcoal-2);
+  font-feature-settings: "tnum" 1;
+  transition: color .35s ease, text-shadow .35s ease;
+}
+.work-row:hover .work-num {
+  color: #FFFFFF;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.45);
+}
+
+/* Title stack — animated rolling reveal on hover */
+.work-title-stack {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  height: 1.1em;
+  line-height: 1.1;
+}
+.work-title-base,
+.work-title-hover {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-style: italic;
+  font-size: clamp(28px, 3.4vw, 44px);
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  transition: transform .55s cubic-bezier(.2,.7,.2,1);
+}
+.work-title-base {
+  color: var(--charcoal);
+}
+.work-title-hover {
+  position: absolute;
+  inset: 0;
+  color: #FFFFFF;
+  text-shadow: 0 0 14px rgba(255, 255, 255, 0.45);
+  transform: translateY(100%);
+}
+.work-row:hover .work-title-base  { transform: translateY(-100%); }
+.work-row:hover .work-title-hover { transform: translateY(0); }
+
+.work-meta {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--charcoal-2);
+  transition: color .35s ease;
+}
+.work-row:hover .work-meta {
+  color: var(--charcoal);
+}
+
+.work-year {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--charcoal-2);
+  font-feature-settings: "tnum" 1;
+  text-align: right;
+  transition: color .35s ease;
+}
+.work-row:hover .work-year { color: var(--charcoal); }
+
+.work-arrow {
+  font-size: 22px;
+  font-weight: 300;
+  color: var(--charcoal-2);
+  opacity: 0;
+  transform: translate(-8px, 4px);
+  transition:
+    opacity .35s cubic-bezier(.2,.7,.2,1),
+    transform .35s cubic-bezier(.2,.7,.2,1),
+    color .35s ease;
+}
+.work-row:hover .work-arrow {
+  opacity: 1;
+  transform: translate(0, 0);
+  color: #FFFFFF;
+}
+
+/* Subtle white-glow horizontal slash that grows under the active row */
+.work-row::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 1px;
+  width: 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+  transition: width .55s cubic-bezier(.2,.7,.2,1);
+}
+.work-row:hover::after { width: 100%; }
+
+/* Cursor-following preview thumbnail (positioned fixed by JS) */
+.work-cursor-thumb {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 180px;
+  border-radius: 10px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0;
+  transform: translate3d(-9999px, -9999px, 0) scale(0.8);
+  transition: opacity .35s cubic-bezier(.2,.7,.2,1), scale .35s cubic-bezier(.2,.7,.2,1);
+  box-shadow:
+    0 30px 60px -20px rgba(0, 0, 0, 0.8),
+    0 0 0 1px rgba(255, 255, 255, 0.12),
+    0 0 36px -8px rgba(255, 255, 255, 0.18);
+  background: #0A0A0B;
+  will-change: transform;
+}
+.work-cursor-thumb.is-visible {
+  opacity: 1;
+  scale: 1;
+}
+.work-cursor-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: opacity .25s ease;
+}
+.work-cursor-thumb::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 60%, rgba(0, 0, 0, 0.35) 100%);
+  pointer-events: none;
+}
+@media (hover: none), (max-width: 760px) {
+  .work-cursor-thumb { display: none; }
+}
+
+/* Mobile: stack the work row content vertically */
+@media (max-width: 760px) {
+  .work-row {
+    grid-template-columns: 44px 1fr 24px;
+    grid-template-areas:
+      "num title arrow"
+      ".   meta  arrow"
+      ".   year  arrow";
+    row-gap: 6px;
+    padding: 22px 10px;
+  }
+  .work-num     { grid-area: num; align-self: start; padding-top: 6px; }
+  .work-title-stack { grid-area: title; }
+  .work-meta    { grid-area: meta;  font-size: 12px; }
+  .work-year    { grid-area: year;  text-align: left; font-size: 10px; }
+  .work-arrow   { grid-area: arrow; align-self: center; opacity: 0.4; transform: none; }
+  .work-row:hover .work-arrow { opacity: 1; }
+  .work-title-base,
+  .work-title-hover { font-size: clamp(26px, 8vw, 38px); }
 }
 
 /* Cursor follower removed — using native cursor for best scroll performance. */
