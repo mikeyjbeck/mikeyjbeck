@@ -162,7 +162,13 @@
       "Bash(curl -s -o /tmp/r2_v7.png 'https://d8j0ntlcm91z4.cloudfront.net/user_3DgWgcNk3H6voBFCx9KNfCLv2GD/hf_20260527_005707_991ed156-da3c-47ed-a5e8-464db3995a08.png')",
       "Bash(curl -s -o /tmp/r2p_v5.png 'https://d8j0ntlcm91z4.cloudfront.net/user_3DgWgcNk3H6voBFCx9KNfCLv2GD/hf_20260527_013320_d4c25228-4923-49e4-bfdd-c69195d649e3.png')",
       "Bash(curl -s -o /tmp/r2p_v6.png 'https://d8j0ntlcm91z4.cloudfront.net/user_3DgWgcNk3H6voBFCx9KNfCLv2GD/hf_20260527_013323_a761fe9b-92f1-4e5a-84e0-5c106987799a.png')",
-      "mcp__magic__21st_magic_component_inspiration"
+      "mcp__magic__21st_magic_component_inspiration",
+      "WebFetch(domain:links.oooweemarketing.com)",
+      "Bash(curl -s --max-time 10 https://mikeyjbeck.com)",
+      "WebFetch(domain:www.oooweemarketing.com)",
+      "Bash(curl -sI --max-time 10 \"https://app.gohighlevel.com/v2/preview/G7ar06RkzR1TEc0Oiu55?notrack=true\")",
+      "Bash(curl -sL --max-time 10 \"https://app.gohighlevel.com/v2/preview/G7ar06RkzR1TEc0Oiu55?notrack=true\")",
+      "Bash(curl -sL --max-time 15 \"https://app.gohighlevel.com/v2/preview/G7ar06RkzR1TEc0Oiu55?notrack=true\")"
     ]
   }
 }

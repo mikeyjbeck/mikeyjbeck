@@ -2410,6 +2410,17 @@ img { display: block; max-width: 100%; }
   margin-top: 8px;
   align-items: start;
 }
+.funnel-case + .funnel-case {
+  margin-top: 42px;
+  padding-top: 42px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+.funnel-frame-hvac {
+  background:
+    radial-gradient(circle at 20% 8%, rgba(242, 237, 223, 0.15), transparent 45%),
+    radial-gradient(circle at 80% 95%, rgba(10, 9, 8, 0.4), transparent 50%),
+    linear-gradient(180deg, #EFE8D6 0%, #E2DBC8 60%, #D4CBB3 100%);
+}
 
 /* Live mini-preview — iframe scaled inside a compact frame */
 .funnel-preview {
@@ -2608,8 +2619,156 @@ img { display: block; max-width: 100%; }
 }
 
 /* ============================================================
-   WORK SHOWCASE — Eileen-style vertical project index
-   with cursor-following preview thumbnail
+   WORK SHOWCASE — editorial grid with always-visible hero thumbs
+   ============================================================ */
+.work-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-top: 32px;
+}
+.work-card {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform .6s cubic-bezier(.2,.7,.2,1);
+}
+.work-card-wide {
+  grid-column: 1 / -1;
+}
+.work-card-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0 4px;
+}
+.work-card-title {
+  font-family: var(--font-body);
+  font-size: clamp(15px, 1.4vw, 18px);
+  font-weight: 600;
+  color: var(--charcoal);
+  letter-spacing: 0.005em;
+}
+.work-card-cat {
+  font-weight: 400;
+  color: var(--charcoal-2);
+}
+.work-card-year {
+  font-family: var(--font-body);
+  font-size: clamp(13px, 1.2vw, 16px);
+  font-weight: 500;
+  color: var(--charcoal-2);
+  font-feature-settings: "tnum" 1;
+  white-space: nowrap;
+}
+.work-card-frame {
+  position: relative;
+  aspect-ratio: 16 / 11;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow:
+    0 24px 50px -22px rgba(0, 0, 0, 0.65),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transition:
+    transform .6s cubic-bezier(.2,.7,.2,1),
+    box-shadow .6s cubic-bezier(.2,.7,.2,1),
+    border-color .35s ease;
+}
+.work-card-wide .work-card-frame { aspect-ratio: 16 / 7; }
+.work-card-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform .9s cubic-bezier(.2,.7,.2,1), filter .5s ease;
+}
+.work-card-frame picture { display: block; width: 100%; height: 100%; }
+.work-card-frame-light {
+  background: linear-gradient(180deg, #14141A 0%, #0C0C12 100%);
+}
+.work-card-frame-dark {
+  background: #000;
+}
+/* Mosaic — 3x2 grid of composite/apparel thumbs */
+.work-card-frame-mosaic {
+  padding: 0;
+}
+.work-mosaic {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2px;
+  background: rgba(255, 255, 255, 0.04);
+}
+.work-mosaic picture { display: block; overflow: hidden; background: #000; }
+.work-mosaic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: saturate(.92);
+  transition: transform 1.2s cubic-bezier(.2,.7,.2,1), filter .5s ease;
+}
+.work-card:hover {
+  transform: translateY(-4px);
+}
+.work-card:hover .work-card-frame {
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 36px 70px -24px rgba(0, 0, 0, 0.85),
+    0 0 0 1px rgba(255, 255, 255, 0.16),
+    0 0 60px -16px rgba(255, 255, 255, 0.15);
+}
+.work-card:hover .work-card-frame > picture img,
+.work-card:hover .work-card-frame img {
+  transform: scale(1.03);
+}
+.work-card:hover .work-mosaic img {
+  filter: saturate(1.05) brightness(1.02);
+}
+.work-card:hover .work-card-title {
+  color: #FFFFFF;
+}
+
+/* Subtle arrow indicator that fades up on hover */
+.work-card-head {
+  position: relative;
+}
+.work-card-head::after {
+  content: "↗";
+  position: absolute;
+  right: 0;
+  bottom: -4px;
+  font-size: 18px;
+  color: #FFFFFF;
+  opacity: 0;
+  transform: translate(-6px, 4px);
+  transition: opacity .35s ease, transform .35s ease;
+  pointer-events: none;
+}
+.work-card:hover .work-card-head::after {
+  opacity: 0.5;
+  transform: translate(0, 0);
+}
+
+/* Mobile: stack to single column */
+@media (max-width: 760px) {
+  .work-grid { grid-template-columns: 1fr; gap: 22px; }
+  .work-card-wide { grid-column: 1; }
+  .work-card-wide .work-card-frame { aspect-ratio: 16 / 11; }
+  .work-card-frame { border-radius: 14px; }
+  .work-mosaic { grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr 1fr; }
+}
+
+/* ============================================================
+   (legacy) WORK ROW LIST — kept for any in-flight refs, no longer rendered
    ============================================================ */
 
 /* Wider card variant — Work uses more horizontal real estate */

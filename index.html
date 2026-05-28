@@ -260,54 +260,49 @@
         </div>
       </div>
 
-      <ul class="work-list" data-work-list role="list">
-        <li>
-          <a class="work-row" href="#project-01"
-             data-thumb="assets/logo-ooowee.png"
-             data-thumb-bg="#FFFFFF">
-            <span class="work-num">01</span>
-            <span class="work-title-stack">
-              <span class="work-title-base">OooWee Agency</span>
-              <span class="work-title-hover">OooWee Agency</span>
-            </span>
-            <span class="work-meta">Marketing Coordinator · Paid + Organic + Funnels</span>
-            <span class="work-year">2026</span>
-            <span class="work-arrow" aria-hidden="true">↗</span>
-          </a>
-        </li>
-        <li>
-          <a class="work-row" href="#project-02"
-             data-thumb="assets/proof-argus-grid.webp"
-             data-thumb-bg="#0A0A0B">
-            <span class="work-num">02</span>
-            <span class="work-title-stack">
-              <span class="work-title-base">ARGUS AI</span>
-              <span class="work-title-hover">ARGUS AI</span>
-            </span>
-            <span class="work-meta">Digital Associate · Short-Form Video for OSINT + Intelligence</span>
-            <span class="work-year">2025 — 26</span>
-            <span class="work-arrow" aria-hidden="true">↗</span>
-          </a>
-        </li>
-        <li>
-          <a class="work-row" href="#project-04"
-             data-thumb="assets/composite-galactic.jpg"
-             data-thumb-bg="#0A0A0B">
-            <span class="work-num">03</span>
-            <span class="work-title-stack">
-              <span class="work-title-base">Design Studio</span>
-              <span class="work-title-hover">Design Studio</span>
-            </span>
-            <span class="work-meta">Freelance · Composites + Apparel + Brand Identity</span>
-            <span class="work-year">2023 — Now</span>
-            <span class="work-arrow" aria-hidden="true">↗</span>
-          </a>
-        </li>
-      </ul>
+      <div class="work-grid" role="list">
+        <a class="work-card" href="#project-01" role="listitem">
+          <header class="work-card-head">
+            <span class="work-card-title">OooWee Agency <span class="work-card-cat">· Marketing Coordinator</span></span>
+            <span class="work-card-year">2026</span>
+          </header>
+          <div class="work-card-frame work-card-frame-light">
+            <picture>
+              <source srcset="assets/proof-ooowee-funnel.webp" type="image/webp" />
+              <img src="assets/proof-ooowee-funnel.jpg" alt="OooWee Deals app rewards funnel landing page" loading="lazy" />
+            </picture>
+          </div>
+        </a>
 
-      <!-- Cursor-following preview thumbnail (positioned: fixed, controlled by JS) -->
-      <div class="work-cursor-thumb" data-cursor-thumb aria-hidden="true">
-        <img alt="" loading="lazy" />
+        <a class="work-card" href="#project-02" role="listitem">
+          <header class="work-card-head">
+            <span class="work-card-title">ARGUS AI <span class="work-card-cat">· Digital Associate</span></span>
+            <span class="work-card-year">2025 — 26</span>
+          </header>
+          <div class="work-card-frame work-card-frame-dark">
+            <picture>
+              <source srcset="assets/proof-argus-grid.webp" type="image/webp" />
+              <img src="assets/proof-argus-grid.jpg" alt="Grid of 30+ short-form videos produced for ARGUS AI" loading="lazy" />
+            </picture>
+          </div>
+        </a>
+
+        <a class="work-card work-card-wide" href="#project-04" role="listitem">
+          <header class="work-card-head">
+            <span class="work-card-title">Design Studio <span class="work-card-cat">· Freelance — Composites &amp; Apparel</span></span>
+            <span class="work-card-year">2023 — Now</span>
+          </header>
+          <div class="work-card-frame work-card-frame-dark work-card-frame-mosaic">
+            <div class="work-mosaic">
+              <picture><source srcset="assets/composite-galactic.jpg" type="image/jpeg" /><img src="assets/composite-galactic.jpg" alt="" loading="lazy" /></picture>
+              <picture><source srcset="assets/composite-stargazing.jpg" type="image/jpeg" /><img src="assets/composite-stargazing.jpg" alt="" loading="lazy" /></picture>
+              <picture><source srcset="assets/composite-wolf.jpg" type="image/jpeg" /><img src="assets/composite-wolf.jpg" alt="" loading="lazy" /></picture>
+              <picture><source srcset="assets/apparel-aurelius.jpg" type="image/jpeg" /><img src="assets/apparel-aurelius.jpg" alt="" loading="lazy" /></picture>
+              <picture><source srcset="assets/composite-dior.jpg" type="image/jpeg" /><img src="assets/composite-dior.jpg" alt="" loading="lazy" /></picture>
+              <picture><source srcset="assets/apparel-gray-na.jpg" type="image/jpeg" /><img src="assets/apparel-gray-na.jpg" alt="" loading="lazy" /></picture>
+            </div>
+          </div>
+        </a>
       </div>
 
       <div class="card-foot">
@@ -357,14 +352,14 @@
       </div>
 
       <!-- Marketing Funnel · OooWee Deals App Rewards Landing -->
-      <section class="funnel-strip" aria-label="OooWee Deals marketing funnel">
+      <section class="funnel-strip" aria-label="OooWee marketing funnels">
         <header class="strip-head">
           <span class="strip-chip">
             <span class="strip-chip-dot"></span>
-            Marketing Funnel · GoHighLevel
+            Marketing Funnels · GoHighLevel
           </span>
           <span class="strip-line"></span>
-          <span class="strip-meta">live preview · architected end-to-end</span>
+          <span class="strip-meta">2 live previews · architected end-to-end</span>
         </header>
 
         <article class="funnel-case">
@@ -406,6 +401,46 @@
                 <li><span class="funnel-bullet-num">8</span> category tabs with 4 brand cards each — 32 reward mechanics surfaced</li>
               </ul>
               <p class="funnel-note">Performance metrics (visits · opt-in rate · CPL · subscriber growth) coming in the next portfolio revision with full client permission.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Second case: HVAC growth funnel for owners doing $500K–$10M/yr -->
+        <article class="funnel-case">
+          <a class="funnel-preview" href="https://app.gohighlevel.com/v2/preview/G7ar06RkzR1TEc0Oiu55?notrack=true" target="_blank" rel="noopener" aria-label="Open live HVAC funnel in a new tab">
+            <div class="funnel-frame funnel-frame-hvac" data-funnel-frame>
+              <div class="funnel-iframe-wrap" data-funnel-iframe-wrap>
+                <iframe class="funnel-iframe"
+                        src="https://app.gohighlevel.com/v2/preview/G7ar06RkzR1TEc0Oiu55?notrack=true"
+                        loading="lazy"
+                        title="OooWee HVAC Growth Agency — live funnel preview"
+                        tabindex="-1"
+                        aria-hidden="true"
+                        scrolling="no"></iframe>
+              </div>
+              <span class="funnel-live-dot" aria-hidden="true"></span>
+              <span class="funnel-open-badge">Live Funnel ↗</span>
+            </div>
+          </a>
+
+          <div class="funnel-meta">
+            <div class="funnel-block">
+              <span class="funnel-block-label">The Brief</span>
+              <p>Build a category-specific lead-generation funnel for HVAC business owners running <strong>$500K–$10M / year</strong> shops — converting cold inbound into <em>qualified estimate bookings</em> straight onto a dispatch calendar.</p>
+            </div>
+            <div class="funnel-block">
+              <span class="funnel-block-label">My Approach</span>
+              <p>Built a vertical-only authority funnel anchored by a four-pillar service stack — <em>GHL funnel build</em>, <em>homeowner email blast</em>, <em>Google Ads &amp; LSA</em>, <em>AI dispatch &amp; booking</em>. Layered on industry social proof, a live ROI calculator, a free HVAC growth audit lead magnet, and a "vs. the alternatives" comparison block. Performance-priced positioning + 14-day launch promise + 14-state coverage marquee deliver category-leader signaling without competing on price.</p>
+            </div>
+            <div class="funnel-block">
+              <span class="funnel-block-label">Surface Stats</span>
+              <ul class="funnel-bullets">
+                <li><span class="funnel-bullet-num">14</span> states currently active for HVAC estimate bookings</li>
+                <li><span class="funnel-bullet-num">4</span> service pillars: funnel build · email blast · paid search · AI dispatch</li>
+                <li><span class="funnel-bullet-num">14d</span> launch SLA — done-for-you build promise</li>
+                <li><span class="funnel-bullet-num">2</span> lead magnets: ROI calculator + free growth audit</li>
+              </ul>
+              <p class="funnel-note">Industry-only, performance-priced. Public preview link verifies architecture; client-side metrics arrive next revision.</p>
             </div>
           </div>
         </article>
