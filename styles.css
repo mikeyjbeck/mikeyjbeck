@@ -2619,6 +2619,18 @@ img { display: block; max-width: 100%; }
 }
 
 /* ============================================================
+   APPROACH BIO — minimal two-paragraph statement
+   ============================================================ */
+.approach-bio {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.approach-bio + .approach-bio {
+  margin-top: 22px;
+}
+
+/* ============================================================
    WORK SHOWCASE — editorial grid with always-visible hero thumbs
    ============================================================ */
 .work-grid {
