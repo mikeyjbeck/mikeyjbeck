@@ -1330,6 +1330,10 @@ img { display: block; max-width: 100%; }
   max-width: 720px;
   margin: 8px auto 0;
 }
+.social-grid-single {
+  grid-template-columns: 1fr;
+  max-width: 460px;
+}
 .social-card {
   display: flex;
   align-items: center;

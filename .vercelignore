@@ -12,3 +12,4 @@ Thumbs.db
 # Source-only PSDs / raw video — site only needs the processed assets
 *.psd
 *.ai
+glow-edit-lab/
