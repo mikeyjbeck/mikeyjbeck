@@ -506,11 +506,11 @@ img { display: block; max-width: 100%; }
 .chip {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 6px 14px 6px 8px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 100px;
+  gap: 12px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
   margin-bottom: 22px;
   font-family: var(--font-body);
 }
@@ -2734,7 +2734,7 @@ img { display: block; max-width: 100%; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 30%;
   display: block;
   transition: transform .9s cubic-bezier(.2,.7,.2,1), filter .5s ease;
 }
