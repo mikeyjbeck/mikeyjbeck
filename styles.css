@@ -931,26 +931,33 @@ img { display: block; max-width: 100%; }
   font-weight: 500;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--ivory);
+  color: var(--charcoal-2);
   text-align: center;
-  text-shadow: 0 1px 6px rgba(43, 37, 32, 0.25);
+  margin-top: 4px;
 }
 
-/* Dark plate for ARGUS-style logos */
+/* Elevated plate to hold client logos */
 .brand-plate {
-  background: var(--ivory);
-  border-radius: 6px;
-  padding: 24px 32px;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 10px;
+  padding: 26px 34px;
   box-shadow:
-    0 20px 40px -20px rgba(43, 37, 32, 0.35),
-    0 0 0 1px rgba(43, 37, 32, 0.08);
+    0 24px 48px -20px rgba(0, 0, 0, 0.7),
+    0 0 0 1px rgba(255, 255, 255, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
   display: flex;
   align-items: center;
   justify-content: center;
 }
+/* Dark variant — for white/inverted client logos */
 .brand-plate-dark {
-  background: var(--charcoal);
-  padding: 32px 36px;
+  background: #0B0B12;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 24px 48px -20px rgba(0, 0, 0, 0.75),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 0 44px -12px rgba(255, 255, 255, 0.08);
+  padding: 32px 38px;
 }
 .brand-logo-full {
   width: 100%;
@@ -958,6 +965,16 @@ img { display: block; max-width: 100%; }
   height: auto;
   object-fit: contain;
   display: block;
+}
+
+/* iFieldSmart logo is horizontal (~6:1) — wider plate, shorter padding */
+.brand-plate-ifieldsmart {
+  padding: 26px 42px;
+  max-width: 460px;
+  width: 100%;
+}
+.brand-logo-ifieldsmart {
+  max-width: 380px;
 }
 
 /* ---------- Design studio thumbnail grid ---------- */
