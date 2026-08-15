@@ -2436,12 +2436,6 @@ img { display: block; max-width: 100%; }
   padding-top: 42px;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
-.funnel-frame-hvac {
-  background:
-    radial-gradient(circle at 20% 8%, rgba(242, 237, 223, 0.15), transparent 45%),
-    radial-gradient(circle at 80% 95%, rgba(10, 9, 8, 0.4), transparent 50%),
-    linear-gradient(180deg, #EFE8D6 0%, #E2DBC8 60%, #D4CBB3 100%);
-}
 
 /* Live mini-preview — iframe scaled inside a compact frame */
 .funnel-preview {
