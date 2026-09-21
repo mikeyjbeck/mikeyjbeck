@@ -687,6 +687,43 @@ img { display: block; max-width: 100%; }
   padding-bottom: 32px;
 }
 
+/* ---------- Objective / Approach / Result case format ---------- */
+.case-meta .case-line {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--charcoal);
+  margin: 0 0 14px;
+  padding-left: 108px;
+  position: relative;
+  text-indent: 0;
+}
+.case-meta .case-line:last-of-type {
+  margin-bottom: 18px;
+}
+.case-label {
+  position: absolute;
+  left: 0;
+  top: 0.35em;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--charcoal-2);
+  width: 92px;
+  display: inline-block;
+}
+@media (max-width: 700px) {
+  .case-meta .case-line {
+    padding-left: 0;
+  }
+  .case-label {
+    position: static;
+    display: block;
+    margin-bottom: 4px;
+    width: auto;
+  }
+}
+
 /* ---------- Toolkit tags ---------- */
 .toolkit {
   display: flex;
@@ -1728,6 +1765,17 @@ img { display: block; max-width: 100%; }
   white-space: nowrap;
 }
 
+.hero-positioning {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--charcoal);
+  margin: 20px 0 0;
+  max-width: 34ch;
+  letter-spacing: -0.005em;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 20px;
+}
+
 .hero-socials {
   list-style: none;
   display: flex;
@@ -2423,6 +2471,62 @@ img { display: block; max-width: 100%; }
   margin-top: 32px;
   padding-top: 24px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ---------- Selected Copy strip · campaign lines ---------- */
+.copy-strip {
+  position: relative;
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+.copy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 32px;
+}
+.copy-card {
+  background: var(--ivory);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 4px;
+  padding: 32px 28px 24px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+  min-height: 200px;
+}
+.copy-line {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 20px;
+  line-height: 1.38;
+  color: var(--charcoal);
+  margin: 0;
+  font-style: italic;
+  letter-spacing: -0.005em;
+}
+.copy-source {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--charcoal-2);
+  font-weight: 500;
+}
+@media (max-width: 900px) {
+  .copy-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .copy-card {
+    min-height: 0;
+    padding: 24px 22px 20px;
+  }
+  .copy-line {
+    font-size: 18px;
+  }
 }
 .funnel-case {
   display: grid;
