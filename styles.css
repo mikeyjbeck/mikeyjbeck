@@ -2473,6 +2473,39 @@ img { display: block; max-width: 100%; }
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+/* ---------- Lab · self-directed project sub-strips ---------- */
+.lab-project {
+  position: relative;
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+.lab-project + .lab-project {
+  margin-top: 56px;
+  padding-top: 40px;
+}
+.lab-case {
+  margin-top: 28px;
+  padding-bottom: 0;
+  max-width: 900px;
+}
+.lab-case .case-line {
+  font-size: 14.5px;
+  line-height: 1.7;
+}
+.lab-case .case-line strong {
+  color: var(--charcoal);
+  font-weight: 600;
+}
+.lab-case code {
+  font-family: 'SF Mono', ui-monospace, Menlo, Consolas, monospace;
+  font-size: 0.86em;
+  padding: 1px 6px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--charcoal);
+}
+
 /* ---------- Selected Copy strip · campaign lines ---------- */
 .copy-strip {
   position: relative;
